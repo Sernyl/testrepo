@@ -13,7 +13,8 @@ namespace test
     {
         public int GetSomeName()
         {
-            throw new NotImplementedException();
+            var r = new Random();
+            return r.Next(5);
         }
     }
 }
