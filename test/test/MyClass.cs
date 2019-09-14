@@ -14,7 +14,15 @@ namespace test
         public void Work()
         {
             var dep = new DependencyClass();
-            Console.WriteLine(dep.GetSomeName());
+            try
+            {
+                Console.WriteLine(dep.GetSomeName() + 12);
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e);
+            }
+            
         }
     }
 }
