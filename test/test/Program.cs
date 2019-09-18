@@ -1,13 +1,17 @@
 ﻿using System;
+using LightInject;
 
 namespace test
 {
-    class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
-            var mc = new MyClass();
-            mc.Work();
+            var container = Container.Create();
+
+            var depClass = container.GetInstance<IDependencyClass>();
+            var dep2 = container.GetInstance<IDependencyClass>();
+
         }
     }
 }
